@@ -1,0 +1,332 @@
+@charset "utf=8";
+
+/* --------------------GENERAL STYLES-------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border-style: none;
+    vertical-align: baseline;
+    font-family:inherit;
+}
+
+html {
+    min-width: 100%;
+}
+
+body {
+    font-family: 'Nunito Sans', 'Open Sans', Arial, sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    text-rendering: geometricPrecision;
+    background-color: var(--app-dark-bg);
+}
+    
+.container {
+    width: min(100% - 30px, 1080px);
+    margin-inline: auto;
+}
+
+.flexbox {
+    display:flex;
+}
+
+.margin-top-30 {
+    margin-top: 60px;
+}
+
+.margin-bottom-30 {
+    margin-bottom: 30px;
+}
+
+/* --------------------COLOR PALLETE-------------------- */
+
+:root {
+    --app-dark-bg: #ffffff;
+    --app-purple: #be0604;
+    --app-blue: #be0604;
+    --app-blue-hover: #be0604;
+   }
+
+/* -------------------- FONT STYLES -------------------- */
+
+/* Section Title */
+h1 {
+    font-size: 20px;
+    font-weight: 400;
+    color: #303030;
+    text-transform:uppercase;
+    letter-spacing: 0.4px;
+    line-height: 60px;
+}
+
+/* Hero Title */
+h2 {
+    font-size: 48px;
+    font-weight: 300;
+    letter-spacing: 0.4px;
+    line-height: 1.4;
+    margin-bottom: 24px;
+    color: #fff;
+}
+
+p {
+    font-size:16px;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 30px;
+    color: #303030;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #303030;
+}
+
+/* --------------------- HEADER----------------------- */
+
+header {
+    background-color:  rgb(252, 252, 252);
+    display: flex;
+    height: 60px;
+    overflow: hidden;
+}
+
+.logo-container-header {
+    display: flex;
+    align-items: center;
+    justify-content: left; 
+    height: 60px; 
+}
+
+.logo-container-header h1 {
+    color: rgb(32, 32, 32);
+    margin: 0;
+  }
+
+.logo-container img {
+    width: 35px; 
+}
+
+header div {
+    width: 40%;
+}
+
+nav {
+    width: 60%;
+    text-align: right;
+}
+
+nav ul {
+    list-style-type: none;
+    font-size: 0px;
+}
+
+nav ul li {
+    display: inline;
+    line-height: 60px;
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 0 15px;
+    color: #303030;
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.25s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #fff;
+    background-color: #000;
+
+}
+
+nav ul li + li {
+    margin-left: 0px;
+}
+
+/* ------------------HERO BANNER---------------------- */
+
+.hero {
+    position: relative;  
+    height: calc(65vh - 60px - 60px);
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); 
+    z-index: 1;
+}
+
+#background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+}
+
+.center {
+    position: relative; 
+    z-index: 2; 
+    height: 100%;
+    display: grid;
+    place-items: center;  
+}
+
+.center div {
+    text-align: center;
+}
+
+section {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+
+
+/* ------------- GALERRY --------------- */
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -7.5px; 
+  }
+  
+  .art {
+    flex: 1 0 calc(25% - 15px); 
+    margin: 7.5px; 
+    text-align: center;
+  }
+  
+  .image-container {
+    width: 100%; 
+    padding-top: 100%; 
+    position: relative;
+    overflow: hidden; 
+  }
+  
+  .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+  }
+
+  .art {
+    flex: 1 0 calc(25% - 15px); 
+    margin: 7.5px; 
+    text-align: center;
+  }
+  
+  .artname {
+    margin-top: 5px;
+    font-size: 18px; 
+    margin-bottom: 5px; 
+    font-weight: 600;
+    text-align: left;
+  }
+  
+  .description {
+    font-size: 15px; 
+    line-height: 1.2; 
+    text-align: left;
+  }
+
+  /* --------------------- HEADER----------------------- */
+
+  footer {
+    background-color: rgb(43, 43, 43);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 60px;
+    color: #fff; /* Ensure all text inside the footer is white */
+  }
+  
+  .footer-logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .footer-info {
+    display: flex;
+    align-items: center;
+    
+  }
+  
+  .footer-info p {
+    margin: 0;
+    color: #fff;
+    font-size: 14px;;
+  }
+  
+  .footer-info a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer-info a:hover {
+    text-decoration: underline;
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    height: 60px; 
+}
+  
+  .logo-container h1 {
+    color: white;
+    margin: 0;
+  }
+  
+  /* --------------------- BUTTON----------------------- */
+
+  .button {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .button.primary {
+    background-color: #000000; 
+    color: white; 
+    border: none;
+  }
+  
+  .button.primary:hover {
+    background-color: #303030; 
+  }
+  
+  .button.secondary {
+    background-color: transparent; 
+    color: #c5c5c5; 
+    border: 1px solid #c5c5c5
+  }
+  
+  .button.secondary:hover {
+    color: #fff; 
+    border-color: #fff; 
+  }
